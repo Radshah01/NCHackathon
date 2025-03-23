@@ -22,21 +22,39 @@
         }
 
         /* Container for the content */
-        .step-container {
-            display: flex;
-            max-width: 1400px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            gap: 2rem;
-        }
+        /* Step Container */
+.step-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    gap: 2rem;
+}
 
+/* Left Side: Program List */
+.program-list {
+    flex: 1;
+    overflow-y: auto; /* Enable scrolling for program list */
+    max-height: 80vh; /* Limit height to ensure feedback is visible */
+    padding-right: 1rem; /* Add some padding for scrollbar */
+}
+
+/* Right Side: Alumni Feedback */
+.alumni-feedback {
+    flex: 1;
+    position: sticky; /* Stick to the top */
+    top: 2rem; /* Position from the top */
+    align-self: flex-start; /* Align to the top */
+    max-height: 80vh; /* Limit height */
+    overflow-y: auto; /* Enable scrolling for feedback */
+    padding-left: 1rem; /* Add some padding */
+    border-left: 1px solid #e0e0e0; /* Add a separator */
+}
         /* Left Side: Program List */
-        .program-list {
-            flex: 1;
-        }
+    
 
         .program-list h2 {
             font-size: 2rem;
@@ -151,12 +169,7 @@
         }
 
         /* Right Side: Alumni Feedback */
-        .alumni-feedback {
-            flex: 1;
-            opacity: 0;
-            transform: translateX(100%);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
+    
 
         .alumni-feedback.visible {
             opacity: 1;
@@ -399,9 +412,11 @@
                 Career Preferences & Recommendations
             </h2>
             <div class="step-container">
-                <!-- Left Side: Program List -->
+         
                 <div class="program-list">
                     <h2>Explore Programs</h2>
+                    
+             
                     <div class="program-item" data-program-id="computer-programming">
                         <h3>Computer Programming & Analysis - Seneca College</h3>
                         <p>Learn programming, algorithms, and software development.</p>
@@ -425,6 +440,8 @@
                         </div>
                         <button class="check-program-button" onclick="window.location.href='computer-programming.html'">Check Program</button>
                     </div>
+            
+              
                     <div class="program-item" data-program-id="business">
                         <h3>Business - Niagara College</h3>
                         <p>Gain skills in management, finance, and entrepreneurship.</p>
@@ -448,6 +465,8 @@
                         </div>
                         <button class="check-program-button" onclick="window.location.href='business.html'">Check Program</button>
                     </div>
+            
+                   
                     <div class="program-item" data-program-id="mechanical-engineering">
                         <h3>Mechanical Engineering Technician - Centennial College</h3>
                         <p>Study mechanics, thermodynamics, and design.</p>
@@ -472,8 +491,8 @@
                         <button class="check-program-button" onclick="window.location.href='mechanical-engineering.html'">Check Program</button>
                     </div>
                 </div>
-        
-                <!-- Right Side: Alumni Feedback -->
+            
+          
                 <div class="alumni-feedback">
                     <h2>Alumni Feedback</h2>
                     <div id="feedback-content">
