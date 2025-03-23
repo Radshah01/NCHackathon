@@ -10,6 +10,251 @@
         .badge-container {
             margin-top: 10px;
         }
+
+        /* Global Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #333;
+        }
+
+        /* Container for the content */
+        .step-container {
+            display: flex;
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            gap: 2rem;
+        }
+
+        /* Left Side: Program List */
+        .program-list {
+            flex: 1;
+        }
+
+        .program-list h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #7C3AED; /* Purple primary color */
+            margin-bottom: 2rem;
+        }
+
+        .program-item {
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background-color: #ffffff;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+
+        .program-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(124, 58, 237, 0.1); /* Purple shadow */
+        }
+
+        .program-item h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 0.5rem;
+        }
+
+        .program-item p {
+            font-size: 1rem;
+            color: #666;
+            margin: 0 0 1rem;
+        }
+
+        .program-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .program-details span {
+            font-size: 0.9rem;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .program-details span i {
+            color: #7C3AED; /* Purple icon color */
+        }
+
+        .compatibility-score {
+            font-weight: 600;
+            color: #10b981; /* Green for compatibility score */
+        }
+
+        .program-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .program-info div {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .program-info div strong {
+            color: #1a1a1a;
+        }
+
+        .personalized-message {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #1a1a1a;
+            background-color: #EDE9FE; /* Light purple background */
+            padding: 0.75rem;
+            border-radius: 8px;
+        }
+
+        .program-highlights {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .program-highlights strong {
+            color: #1a1a1a;
+        }
+
+        .check-program-button {
+            margin-top: 1.5rem;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #7C3AED; /* Purple primary color */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .check-program-button:hover {
+            background-color: #6D28D9; /* Darker purple on hover */
+        }
+
+        /* Right Side: Alumni Feedback */
+        .alumni-feedback {
+            flex: 1;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .alumni-feedback.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .alumni-feedback h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #7C3AED; /* Purple primary color */
+            margin-bottom: 2rem;
+        }
+
+        .alumni-card {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e0e0e0;
+        }
+
+        .alumni-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0;
+        }
+
+        .alumni-card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0.5rem 0 0;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .rating span {
+            font-size: 0.9rem;
+            color: #1a1a1a;
+        }
+
+        .rating .stars {
+            color: #f59e0b; /* Yellow for stars */
+        }
+
+        .no-feedback {
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .alumni-comment {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background-color: #f8f9fa;
+            border-left: 4px solid #7C3AED; /* Purple accent border */
+            border-radius: 8px;
+        }
+
+        .alumni-comment p {
+            font-size: 0.9rem;
+            color: #475569; /* Gray text */
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .step-container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .program-list, .alumni-feedback {
+                padding: 0;
+            }
+
+            .program-item {
+                padding: 1rem;
+            }
+
+            .program-item h3 {
+                font-size: 1.25rem;
+            }
+
+            .program-item p {
+                font-size: 0.9rem;
+            }
+
+            .program-info {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -59,80 +304,100 @@
 
         <!-- Page 2: Career Preferences & Suggestions -->
         <div id="page-2" class="d-none">
-            <h2 class="mb-4">Career Preferences & Recommendations</h2>
-
-            <div class="row">
-                <!-- Career Suggestion Card 1 -->
-                <div class="col-md-4">
-                    <div class="card shadow mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Software Developer</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Seneca College, Toronto</h6>
-                            <p class="card-text">
-                                <strong>Program:</strong> Computer Programming & Analysis (CPA)<br>
-                                <strong>Employability:</strong> 94% within 6 months<br>
-                                <strong>Job Openings (Toronto):</strong> 1,240
-                            </p>
-                            <div>
-                                <strong>User Testimonials:</strong>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">"Great practical experience and job-ready skills!" – Maria D.</li>
-                                    <li class="list-group-item">"Perfect program to kickstart my career." – James K.</li>
-                                </ul>
-                            </div>
+            <h2 class="mb-4">
+                <a href="#" onclick="backToPage1()" style="text-decoration: none; color: #7C3AED; font-weight: 300; display: inline-flex; align-items: center; gap: 0.5rem;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left">
+                        <path d="m12 19-7-7 7-7"></path>
+                        <path d="M19 12H5"></path>
+                    </svg>
+                    <span style="text-decoration: underline; font-size: 19px;">Back</span>
+                </a>
+                Career Preferences & Recommendations
+            </h2>
+            <div class="step-container">
+                <!-- Left Side: Program List -->
+                <div class="program-list">
+                    <h2>Explore Programs</h2>
+                    <div class="program-item" data-program-id="computer-programming">
+                        <h3>Computer Programming & Analysis - Seneca College</h3>
+                        <p>Learn programming, algorithms, and software development.</p>
+                        <div class="program-details">
+                            <span><i class="fas fa-calendar-alt"></i>Term: 3 years</span>
+                            <span><i class="fas fa-percentage"></i>Compatibility: <span class="compatibility-score">92%</span></span>
                         </div>
+                        <div class="program-info">
+                            <div><strong>Location:</strong> Toronto, ON</div>
+                            <div><strong>Degree:</strong> Advanced Diploma</div>
+                            <div><strong>Employability:</strong> 94% within 6 months</div>
+                            <div><strong>Seat Availability:</strong> Limited</div>
+                            <div><strong>Turn Around Time:</strong> 2-4 weeks</div>
+                            <div><strong>Conversion Rate:</strong> 80%</div>
+                        </div>
+                        <div class="personalized-message">
+                            <strong>Why this program?</strong> Your experience in Python and data analysis aligns well with this program.
+                        </div>
+                        <div class="program-highlights">
+                            <strong>Highlights:</strong> Co-op opportunities, strong industry connections, and a 95% job placement rate.
+                        </div>
+                        <button class="check-program-button" onclick="window.location.href='computer-programming.html'">Check Program</button>
+                    </div>
+                    <div class="program-item" data-program-id="business">
+                        <h3>Business - Niagara College</h3>
+                        <p>Gain skills in management, finance, and entrepreneurship.</p>
+                        <div class="program-details">
+                            <span><i class="fas fa-calendar-alt"></i>Term: 2 years</span>
+                            <span><i class="fas fa-percentage"></i>Compatibility: <span class="compatibility-score">85%</span></span>
+                        </div>
+                        <div class="program-info">
+                            <div><strong>Location:</strong> Niagara-on-the-Lake, ON</div>
+                            <div><strong>Degree:</strong> Diploma</div>
+                            <div><strong>Employability:</strong> 92% within 6 months</div>
+                            <div><strong>Seat Availability:</strong> Open</div>
+                            <div><strong>Turn Around Time:</strong> 3-5 weeks</div>
+                            <div><strong>Conversion Rate:</strong> 75%</div>
+                        </div>
+                        <div class="personalized-message">
+                            <strong>Why this program?</strong> Your background in project management makes this program a great fit.
+                        </div>
+                        <div class="program-highlights">
+                            <strong>Highlights:</strong> Internship opportunities, global exchange programs, and a 90% job placement rate.
+                        </div>
+                        <button class="check-program-button" onclick="window.location.href='business.html'">Check Program</button>
+                    </div>
+                    <div class="program-item" data-program-id="mechanical-engineering">
+                        <h3>Mechanical Engineering Technician - Centennial College</h3>
+                        <p>Study mechanics, thermodynamics, and design.</p>
+                        <div class="program-details">
+                            <span><i class="fas fa-calendar-alt"></i>Term: 2 years</span>
+                            <span><i class="fas fa-percentage"></i>Compatibility: <span class="compatibility-score">78%</span></span>
+                        </div>
+                        <div class="program-info">
+                            <div><strong>Location:</strong> Toronto, ON</div>
+                            <div><strong>Degree:</strong> Diploma</div>
+                            <div><strong>Employability:</strong> 96% within 6 months</div>
+                            <div><strong>Seat Availability:</strong> Limited</div>
+                            <div><strong>Turn Around Time:</strong> 4-6 weeks</div>
+                            <div><strong>Conversion Rate:</strong> 70%</div>
+                        </div>
+                        <div class="personalized-message">
+                            <strong>Why this program?</strong> Your interest in robotics aligns with the program's focus on innovation.
+                        </div>
+                        <div class="program-highlights">
+                            <strong>Highlights:</strong> Hands-on projects, partnerships with Tesla and Boeing, and a 93% job placement rate.
+                        </div>
+                        <button class="check-program-button" onclick="window.location.href='mechanical-engineering.html'">Check Program</button>
                     </div>
                 </div>
-
-                <!-- Career Suggestion Card 2 -->
-                <div class="col-md-4">
-                    <div class="card shadow mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Web Designer</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">George Brown College, Toronto</h6>
-                            <p class="card-text">
-                                <strong>Program:</strong> Interactive Media Design<br>
-                                <strong>Employability:</strong> 89% within 6 months<br>
-                                <strong>Job Openings (Toronto):</strong> 830
-                            </p>
-                            <div>
-                                <strong>User Testimonials:</strong>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">"Creative environment and excellent mentorship." – Sarah L.</li>
-                                    <li class="list-group-item">"Landed a job right after graduation!" – Raj V.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Career Suggestion Card 3 -->
-                <div class="col-md-4">
-                    <div class="card shadow mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Data Analyst</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Humber College, Toronto</h6>
-                            <p class="card-text">
-                                <strong>Program:</strong> Business Insights & Analytics<br>
-                                <strong>Employability:</strong> 91% within 6 months<br>
-                                <strong>Job Openings (Toronto):</strong> 650
-                            </p>
-                            <div>
-                                <strong>User Testimonials:</strong>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">"Excellent curriculum and real-world training." – Ahmed M.</li>
-                                    <li class="list-group-item">"Helped me transition to analytics easily." – Jenny W.</li>
-                                </ul>
-                            </div>
-                        </div>
+        
+                <!-- Right Side: Alumni Feedback -->
+                <div class="alumni-feedback">
+                    <h2>Alumni Feedback</h2>
+                    <div id="feedback-content">
+                        <p class="no-feedback">Select a program to view alumni feedback.</p>
                     </div>
                 </div>
             </div>
-
-            <button class="btn btn-secondary mt-4" onclick="backToPage1()">Back</button>
-            <button class="btn btn-success mt-4" onclick="submitForm()">Submit</button>
         </div>
-
     </div>
 
     <script>
@@ -184,6 +449,100 @@
                 badge.textContent = skill;
                 badgeContainer.appendChild(badge);
             });
+        });
+
+        // Sample alumni feedback data
+        const feedbackData = {
+            'computer-programming': [
+                {
+                    name: 'John Doe',
+                    educationRating: 4.5,
+                    careerRating: 4.0,
+                    career: 'Software Engineer at Google',
+                    comment: 'The program provided a strong foundation in algorithms and data structures, which helped me excel in technical interviews.'
+                },
+                {
+                    name: 'Jane Smith',
+                    educationRating: 4.0,
+                    careerRating: 3.5,
+                    career: 'Data Scientist at Microsoft',
+                    comment: 'The machine learning courses were exceptional and directly applicable to my current role.'
+                }
+            ],
+            'business': [
+                {
+                    name: 'Alice Johnson',
+                    educationRating: 4.2,
+                    careerRating: 4.5,
+                    career: 'Marketing Manager at Amazon',
+                    comment: 'The program’s focus on case studies and real-world projects prepared me for the fast-paced environment at Amazon.'
+                },
+                {
+                    name: 'Bob Brown',
+                    educationRating: 3.8,
+                    careerRating: 4.0,
+                    career: 'Financial Analyst at Goldman Sachs',
+                    comment: 'The finance courses were very practical and helped me secure my current role.'
+                }
+            ],
+            'mechanical-engineering': [
+                {
+                    name: 'Charlie Davis',
+                    educationRating: 4.7,
+                    careerRating: 4.8,
+                    career: 'Mechanical Engineer at Tesla',
+                    comment: 'The hands-on projects and industry partnerships were invaluable in landing my dream job at Tesla.'
+                }
+            ]
+        };
+
+        // Function to handle program card hover
+        function handleProgramHover(programId) {
+            const feedbackContent = document.getElementById('feedback-content');
+            const feedback = feedbackData[programId];
+
+            if (feedback && feedback.length > 0) {
+                let html = '';
+                feedback.forEach(alumni => {
+                    html += `
+                        <div class="alumni-card">
+                            <h3>${alumni.name}</h3>
+                            <div class="rating">
+                                <span>Education:</span>
+                                <div class="stars">${'★'.repeat(Math.round(alumni.educationRating))}${'☆'.repeat(5 - Math.round(alumni.educationRating))}</div>
+                            </div>
+                            <div class="rating">
+                                <span>Career:</span>
+                                <div class="stars">${'★'.repeat(Math.round(alumni.careerRating))}${'☆'.repeat(5 - Math.round(alumni.careerRating))}</div>
+                            </div>
+                            <p>Current Role: ${alumni.career}</p>
+                            <div class="alumni-comment">
+                                <p>"${alumni.comment}"</p>
+                            </div>
+                        </div>
+                    `;
+                });
+                feedbackContent.innerHTML = html;
+            } else {
+                feedbackContent.innerHTML = '<p class="no-feedback">No feedback available for this program.</p>';
+            }
+
+            // Show the feedback section
+            document.querySelector('.alumni-feedback').classList.add('visible');
+        }
+
+        // Function to handle program card mouse leave
+        function handleProgramLeave() {
+            // Hide the feedback section
+            document.querySelector('.alumni-feedback').classList.remove('visible');
+        }
+
+        // Attach hover event listeners to program cards
+        const programItems = document.querySelectorAll('.program-item');
+        programItems.forEach(item => {
+            const programId = item.getAttribute('data-program-id');
+            item.addEventListener('mouseenter', () => handleProgramHover(programId));
+            item.addEventListener('mouseleave', handleProgramLeave);
         });
     </script>
 </body>
