@@ -259,11 +259,92 @@
 </head>
 
 <body>
+            <!-- Header nav -->
+            <header class="border-bottom bg-white">
+                <div
+                  class="container py-4 d-flex justify-content-between align-items-center"
+                >
+                  <div class="text-xl font-semibold">
+                    <span class="text-primary">CICan</span
+                    ><span class="text-primary">Navigator</span>
+                  </div>
+                  <div class="d-flex align-items-center gap-4">
+                    <nav class="d-flex gap-4">
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >For Industry Partners</a
+                      >
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >For Educators</a
+                      >
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >For Employers</a
+                      >
+                      <a href="#" class="text-secondary text-decoration-none"
+                        >For Alumni</a
+                      >
+                    </nav>
+      
+                    <div class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle p-2 rounded-lg hover:bg-primary-100 transition-colors"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        aria-label="Change language"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          class="lucide lucide-globe w-5 h-5 text-primary-500"
+                        >
+                          <circle cx="12" cy="12" r="10"></circle>
+                          <path
+                            d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"
+                          ></path>
+                          <path d="M2 12h20"></path>
+                        </svg>
+                      </a>
+                      <ul
+                        class="dropdown-menu transition-all duration-200 w-48 bg-white rounded-lg shadow-lg"
+                      >
+                        <li>
+                          <a
+                            class="dropdown-item px-4 py-2 text-xs font-medium text-gray-500 uppercase"
+                            href="#"
+                            >English</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item px-4 py-2 text-xs font-medium text-gray-500 uppercase"
+                            href="#"
+                            >French
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </header>
     <div class="container py-4">
 
         <!-- Page 1: Resume & Location -->
         <div id="page-1">
-            <h2 class="mb-4">Submit Your Resume & Location</h2>
+            <h2 class="mb-4"><a href="index.html"  style="text-decoration: none; color: #7C3AED; font-weight: 300; display: inline-flex; align-items: center; gap: 0.5rem; margin-right: 15px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left">
+                    <path d="m12 19-7-7 7-7"></path>
+                    <path d="M19 12H5"></path>
+                </svg>
+                <span style="text-decoration: underline; font-size: 19px;">Back</span>
+            </a>Submit Your Resume & Location</h2>
             <div class="row">
                 <div class="col-md-6">
                     <div class="card shadow">
